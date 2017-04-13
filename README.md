@@ -1,2 +1,2 @@
-# travisci-test
-Testing Travis-CI
+# publicci-test
+Testing public ci in scope of snap-ci analog research
