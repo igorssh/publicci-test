@@ -1,3 +1,5 @@
+package lv.ctco.scm;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -8,7 +8,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -19,3 +19,15 @@ dependencies {
 group = 'lv.ctco.scm'
 archivesBaseName = 'publicci-test'
 mainClassName = 'lv.ctco.scm.App'
+
+test {
+    useJUnit()
+}
+
+sourceSets {
+    test {
+        java {
+            srcDir 'src/test/lv/ctco/scm'
+        }
+    }
+}
