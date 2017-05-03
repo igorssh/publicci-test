@@ -1,7 +1,14 @@
 language: java
 
+env:
+  global:
+    secure: z7ZF3LklGTBDngEmkGHpGKQCC+916kQ8/kkpxjGI44DG4bb5b4nFP7LFmE1Y+2IzKR/giDwtKi3h4v9u7aygcO0lVbVObOx/89R+WoRhomLJOoGHpZQTMwSKv+DEimi6s+yFE9a6XAc1jCR7OkvRXYNSixa5spy6I65C6NTMTmaXEjOPtTZMGmWYTTNlYgE4wMKsTxVKRDdWLlt+rvQaskXC3g5TqbrtNWuxssx9fUgJ8Cphm6S/Hg0vxarYDI+5SOo1LOUPqC+2HOpktLZhVS7rq7F2MSeloMd+OJjyiU/3JyS9RMlacF80H0h7sAM4K7nBNipewLf6HvFF/dTD7/QOF/o65cyoC0fCGJ0ihBO+7wXP1MwkpVDdDdW0yDfuIlOkSt0bT0sLgxBkx9FsOZ5MyG6aB3zP0MM+KnIZvzqt8e+Wqd5gp457madBDa+2kDWgl+9ZBU2KA5MAmkstYLicfLdVYeSu7tHbDn6KzaSBu9fMKYhmuzIEGf/doi5SqhzRxVGh8au6TdKAhuZcC454rWd4zFzZbD14gi3mDMZKuJRaIb3njINZrUWgw+GyxAeoPUAFbn8xmNRw74H2VcRtYypE7UTmzdDAZz+Lc/tn0Zof2Yy1QFR4LFlTO8HP4bzJ8+oHihHa7CVJuVd9fjBB+e+z3kZz2JC+NcxOWNM=
+
 jdk:
-  - oraclejdk8
+- oraclejdk8
 
 before_install:
- - chmod +x gradlew
+- chmod +x gradlew
+- openssl aes-256-cbc -k "$secret_password" -in super_secret.txt.enc -out super_secret.txt -d
+
+script: cat super_secret.txt
