@@ -27,4 +27,5 @@ build:
     - script:
         name: gradle build
         code: |
-          gradlew assemble
+          ls -lah
+          # gradlew assemble
