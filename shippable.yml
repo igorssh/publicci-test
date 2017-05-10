@@ -6,4 +6,5 @@ jdk:
 build:
   ci:
    - ls -lah
-   #- gradlew assemble
+   - chmod +x gradlew
+   - gradlew assemble
