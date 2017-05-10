@@ -7,4 +7,4 @@ build:
   ci:
    - chmod +x gradlew
    - ls -lah
-   - gradlew assemble
+   - ./gradlew assemble
