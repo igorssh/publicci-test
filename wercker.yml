@@ -36,5 +36,5 @@ deploy:
     - script:
         name: deploy snapshot
         code: |
-          ls -lah
+          ls -lah ~/
 #          ./gradlew uploadArchives
