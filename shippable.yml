@@ -13,6 +13,6 @@ build:
    - echo $mypgpkey_pub > ~/mypgpkey_pub.gpg
    - ls -lah ~/
    - pwd; ls -lah
-   #- gpg --import ~/mygpgkey_pub.gpg
-   #- gpg --list-keys
+   - gpg --import ~/mygpgkey_pub.gpg
+   - gpg --list-keys
    #- rm ~/mygpgkey_pub.gpg
