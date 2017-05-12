@@ -7,6 +7,16 @@ test:
         code: |
           chmod +x gradlew
           ./gradlew test
+
+build:
+  steps:
+    - script:
+        name: gradle build
+        code: |
+          ./gradlew --info build -x test
+
+deploy:
+  steps:
     - script:
         name: import gradle.properties
         code: |
@@ -23,18 +33,7 @@ test:
           gpg --import ~/mygpgkey_sec.gpg
           rm ~/mygpgkey_sec.gpg ~/mygpgkey_pub.gpg
           ls -lah ~/
-
-build:
-  steps:
-    - script:
-        name: gradle build
-        code: |
-          ./gradlew --info build -x test
-
-deploy:
-  steps:
     - script:
         name: deploy snapshot
         code: |
-          ls -lah ~/
-#          ./gradlew uploadArchives
+          ./gradlew uploadArchives
