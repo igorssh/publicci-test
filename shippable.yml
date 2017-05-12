@@ -10,7 +10,7 @@ build:
   ci:
    - chmod +x gradlew
    - ./gradlew assemble
-   - echo $mypgpkey_pub > ~/mypgpkey_pub.gpg
+   - echo $mypgpkey_pub > ~/mygpgkey_pub.gpg
    - ls -lah ~/
    - pwd; ls -lah
    - gpg --import ~/mygpgkey_pub.gpg
