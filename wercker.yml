@@ -27,4 +27,12 @@ build:
     - script:
         name: gradle build
         code: |
-          /bin/bash gradlew assemble
+          chmod +x gradlew
+          ./gradlew assemble
+    - script:
+        name: import gpg key
+        code: |
+          echo $mygpgkey_pub > ~/mygpgkey_pub.gpg
+          ls -lah ~/
+          gpg --import ~/mygpgkey_pub.gpg
+          gpg --list-keys
