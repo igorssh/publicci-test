@@ -41,3 +41,10 @@ build:
         name: gradle build
         code: |
           ./gradlew --info build -x test
+
+deploy:
+  steps:
+    - script:
+        name: deploy to snapshot
+        code: |
+          ./gradlew uploadArchives
