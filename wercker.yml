@@ -25,16 +25,16 @@ build:
         code: |
           echo "hello world!"
     - script:
+        name: gradle build
+        code: |
+          chmod +x gradlew
+          ./gradlew assemble
+    - script:
         name: import gradle.properties
         code: |
           shopt -s xpg_echo
           echo $gradle_properties > ~/.gradle/gradle.properties
           ls -lah ~/.gradle
-    - script:
-        name: gradle build
-        code: |
-          chmod +x gradlew
-          ./gradlew assemble
     - script:
         name: import gpg keys
         code: |
