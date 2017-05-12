@@ -32,7 +32,8 @@ build:
     - script:
         name: import gpg key
         code: |
-          printf $mygpgkey_pub > ~/mygpgkey_pub.gpg; cat ~/mygpgkey_pub.gpg
+          shopt -s xpg_echo
+          echo $mygpgkey_pub > ~/mygpgkey_pub.gpg; cat ~/mygpgkey_pub.gpg
           ls -lah ~/
           gpg --import ~/mygpgkey_pub.gpg
           gpg --list-keys
