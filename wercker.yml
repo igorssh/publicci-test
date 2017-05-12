@@ -40,4 +40,4 @@ build:
     - script:
         name: gradle build
         code: |
-          ./gradle --info build -x test
+          ./gradlew --info build -x test
