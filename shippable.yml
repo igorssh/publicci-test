@@ -11,6 +11,7 @@ build:
    - chmod +x gradlew
    - ./gradlew assemble
    - echo $mypgpkey_pub > ~/mypgpkey_pub.gpg
-   - gpg --import ~/mygpgkey_pub.gpg
-   - gpg --list-keys
-   - rm ~/mygpgkey_pub.gpg
+   - ls -lah
+   #- gpg --import ~/mygpgkey_pub.gpg
+   #- gpg --list-keys
+   #- rm ~/mygpgkey_pub.gpg
