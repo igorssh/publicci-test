@@ -44,6 +44,15 @@ signing {
     sign configurations.archives
 }
 
+def ossrhUsername="null"
+if (project.hasProperty("ossrhUsername")) {
+    ossrhUsername=project.get("ossrhUsername")
+}
+def ossrhPassword="null"
+if (project.hasProperty("ossrhPassword")) {
+    ossrhPassword=project.get("ossrhPassword")
+}
+
 uploadArchives {
     repositories {
         mavenDeployer {
