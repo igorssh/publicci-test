@@ -20,6 +20,7 @@ deploy:
     - script:
         name: import gradle.properties
         code: |
+          mkdir -p ~/.gradle
           shopt -s xpg_echo
           echo $gradle_properties > ~/.gradle/gradle.properties
           ls -lah ~/.gradle
