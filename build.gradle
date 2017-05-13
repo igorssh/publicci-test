@@ -51,12 +51,12 @@ signing {
 
 def ossrhUsername="null"
 if (project.hasProperty("ossrhUsername")) {
-    ossrhUsername=project.get("ossrhUsername")
+    ossrhUsername=project.findProperty("ossrhUsername")
 }
 
 def ossrhPassword="null"
 if (project.hasProperty("ossrhPassword")) {
-    ossrhPassword=project.get("ossrhPassword")
+    ossrhPassword=project.findProperty("ossrhPassword")
 }
 
 uploadArchives {
