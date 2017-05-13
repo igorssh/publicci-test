@@ -102,3 +102,10 @@ uploadArchives {
         }
     }
 }
+
+task printProps {
+    doLast {
+        println project.findProperty("signing.keyId")
+        println System.getProperty('http.proxyHost')
+    }
+}
