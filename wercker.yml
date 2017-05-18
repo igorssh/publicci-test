@@ -57,6 +57,6 @@ release:
     - script:
         name: run release
         code: |
-#          ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
+        #  ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
           git status
           git branch
