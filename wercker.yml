@@ -38,3 +38,10 @@ deploy:
         name: deploy snapshot
         code: |
           ./gradlew uploadArchives
+
+release:
+  steps:
+    - script:
+        name: run release
+        code: |
+          ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
