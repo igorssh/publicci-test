@@ -37,7 +37,23 @@ deploy:
         code: |
           ./gradlew uploadArchives
 
-  release:
+release:
+  steps:
+    - script:
+        name: import gradle.properties
+        code: |
+          ./gradlew init
+          shopt -s xpg_echo
+          echo $gradle_properties > ~/.gradle/gradle.properties
+    - script:
+        name: import gpg keys
+        code: |
+          shopt -s xpg_echo
+          echo $mygpgkey_pub > ~/mygpgkey_pub.gpg;
+          gpg --import  ~/mygpgkey_pub.gpg
+          echo $mygpgkey_sec > ~/mygpgkey_sec.gpg;
+          gpg --import ~/mygpgkey_sec.gpg
+          rm ~/mygpgkey_sec.gpg ~/mygpgkey_pub.gpg
     - script:
         name: run release
         code: |
