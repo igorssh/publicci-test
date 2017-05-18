@@ -37,7 +37,7 @@ deploy:
         code: |
           ./gradlew uploadArchives
 
-    initialize:
+  release:
     - script:
         name: run release
         code: |
