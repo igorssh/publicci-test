@@ -102,3 +102,25 @@ uploadArchives {
         }
     }
 }
+
+release {
+    failOnCommitNeeded = true
+    failOnPublishNeeded = true
+    failOnSnapshotDependencies = true
+    failOnUnversionedFiles = false
+    failOnUpdateNeeded = true
+    revertOnFail = true
+    preTagCommitMessage = '[Public CI Test] [skip ci] - pre tag commit: '
+    newVersionCommitMessage = '[Public CI Test] [skip ci] - new version commit: '
+    tagTemplate = '${version}'
+    versionPropertyFile = 'gradle.properties'
+    versionProperties = []
+    buildTasks = ['build']
+}
+
+nexusStaging {
+    packageGroup = "lv.ctco"
+    numberOfRetries = 30
+}
+
+afterReleaseBuild.dependsOn uploadArchives
