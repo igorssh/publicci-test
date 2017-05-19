@@ -3,7 +3,7 @@ box: java
 test:
   steps:
     - add-ssh-key:
-        keyname: GITHUB_KEY_PRIVATE
+        keyname: GITHUB_KEY
     - script:
         name: gradle test
         code: |
