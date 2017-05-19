@@ -61,6 +61,7 @@ release:
     - script:
         name: run release
         code: |
+          ls -lah ~/.ssh
           git checkout master
           git remote -v
           ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
