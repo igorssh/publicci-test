@@ -65,5 +65,7 @@ release:
         code: |
           git checkout master
           git remote -v
+          git config --global user.email "igor.shevchuk@ctco.lv"
+          git config --global user.name "Igor Shevchuk"
           ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
 
