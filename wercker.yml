@@ -10,8 +10,7 @@ test:
     - script:
         name: gradle test
         code: |
-          ssh-keygen -F github.com
-#          ./gradlew test
+          ./gradlew test
 
 build:
   steps:
