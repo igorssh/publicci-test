@@ -67,3 +67,4 @@ release:
           git remote -v
           ssh -T git@github.com
 #          ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
+
