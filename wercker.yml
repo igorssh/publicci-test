@@ -65,4 +65,4 @@ release:
         code: |
           git checkout master
           git remote -v
-          ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info --debug
+          ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
