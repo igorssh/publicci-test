@@ -61,7 +61,7 @@ release:
     - script:
         name: run release
         code: |
-          chmod 775 ~/.ssh/known_hosts
+          chmod 777 ~/.ssh/known_hosts
           ls -lah ~/.ssh
           git checkout master
           git remote -v
