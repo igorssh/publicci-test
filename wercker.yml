@@ -63,5 +63,4 @@ release:
         code: |
           git checkout master
           git remote -v
-          ssh-keygen -F github.com
-#          ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
+          ./gradlew release closeAndPromoteRepository -Prelease.useAutomaticVersion=true --info
