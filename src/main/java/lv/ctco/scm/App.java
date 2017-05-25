@@ -2,7 +2,7 @@ package lv.ctco.scm;
 
 public class App {
     public String getGreeting() {
-        return "Hello world.";
+        return "Hello world!";
     }
 
     public static void main(String[] args) {
