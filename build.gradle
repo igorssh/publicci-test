@@ -137,6 +137,7 @@ release {
 
 nexusStaging {
     packageGroup = "lv.ctco"
+    stagingProfileId = "4426136f989f98"
     numberOfRetries = 50
     delayBetweenRetriesInMillis = 10000
 }
