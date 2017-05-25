@@ -1,4 +1,4 @@
-box: java:1.7
+box: java:7
 
 test:
   steps:
