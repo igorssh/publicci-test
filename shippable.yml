@@ -11,10 +11,9 @@ build:
   ci:
    - chmod +x gradlew
    - ./gradlew assemble
-   - echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > $KEY_LOC
-   - echo $MY_GPGKEY_PUB | tr -s ' ' | tr ' ' '\n' >> $KEY_LOC
-   - echo "-----END PGP PUBLIC KEY BLOCK-----" >> $KEY_LOC
-   - echo $KEY_LOC > ~/mygpgkey_pub.gpg
+   - echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > ~/mygpgkey_pub.gpg
+   - echo $MY_GPGKEY_PUB | tr -s ' ' | tr ' ' '\n' >> ~/mygpgkey_pub.gpg
+   - echo "-----END PGP PUBLIC KEY BLOCK-----" >> ~/mygpgkey_pub.gpg
    - ls -lah ~/; cat ~/mygpgkey_pub.gpg
    - pwd; ls -lah
    - gpg --import ~/mygpgkey_pub.gpg
