@@ -12,7 +12,7 @@ build:
    - chmod +x gradlew
    - ./gradlew assemble
    - shopt -s xpg_echo; echo $mygpgkey_pub > ~/mygpgkey_pub.gpg
-   - ls -lah ~/
+   - ls -lah ~/; cat ~/mygpgkey_pub.gpg
    - pwd; ls -lah
    - gpg --import ~/mygpgkey_pub.gpg
    - gpg --list-keys
