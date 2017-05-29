@@ -1,0 +1,5 @@
+jobs:
+  - name: public-test_runCI
+    type: runCI
+    steps:
+      - OUT: my_image
