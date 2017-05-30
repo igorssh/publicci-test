@@ -2,4 +2,18 @@ jobs:
   - name: public-test_runCI
     type: runCI
     steps:
-      - OUT: my_image
+      - IN: public-test_ciRepo
+
+  - name: test
+    type: runCI
+    steps:
+       - IN: public-test_runCI
+       - echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > ~/mygpgkey_pub.gpg
+       - echo "" >> ~/mygpgkey_pub.gpg
+       - echo $MY_GPGKEY_PUB | tr -s ' ' | tr ' ' '\n' >> ~/mygpgkey_pub.gpg
+       - echo "-----END PGP PUBLIC KEY BLOCK-----" >> ~/mygpgkey_pub.gpg
+       - ls -lah ~/; cat ~/mygpgkey_pub.gpg
+       - pwd; ls -lah
+       - gpg --import ~/mygpgkey_pub.gpg
+       - gpg --list-keys
+       #- rm ~/mygpgkey_pub.gpg
