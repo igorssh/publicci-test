@@ -12,7 +12,6 @@ build:
    - chmod +x gradlew
    - ./gradlew assemble
    - echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > ~/mygpgkey_pub.gpg
-   - echo "Version: GnuPG v2.0.14 (GNU/Linux)" >> ~/mygpgkey_pub.gpg
    - echo -e '\n' >> ~/mygpgkey_pub.gpg
    - echo $MY_GPGKEY_PUB | tr -s ' ' | tr ' ' '\n' >> ~/mygpgkey_pub.gpg
    - echo "-----END PGP PUBLIC KEY BLOCK-----" >> ~/mygpgkey_pub.gpg
