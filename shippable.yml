@@ -12,7 +12,7 @@ build:
    - chmod +x gradlew
    - ./gradlew assemble
    - echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > ~/mygpgkey_pub.gpg
-   - echo -e '\n' >> ~/mygpgkey_pub.gpg
+   - echo "" >> ~/mygpgkey_pub.gpg
    - echo $MY_GPGKEY_PUB | tr -s ' ' | tr ' ' '\n' >> ~/mygpgkey_pub.gpg
    - echo "-----END PGP PUBLIC KEY BLOCK-----" >> ~/mygpgkey_pub.gpg
    - ls -lah ~/; cat ~/mygpgkey_pub.gpg
