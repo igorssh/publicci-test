@@ -11,3 +11,4 @@ build:
   ci:
    - chmod +x gradlew
    - ./gradlew assemble
+   - echo "versionName=$BRANCH.$BUILD_NUMBER" >> $JOB_STATE/my_image.env

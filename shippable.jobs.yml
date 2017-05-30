@@ -3,12 +3,12 @@ jobs:
     type: runCI
     steps:
       - IN: public-test_ciRepo
-      - OUT: runCI
+      - OUT: my_image
 
   - name: test
     type: runCI
     steps:
-       - IN: public-test_runCI
+       - IN: my_image
        - echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > ~/mygpgkey_pub.gpg
        - echo "" >> ~/mygpgkey_pub.gpg
        - echo $MY_GPGKEY_PUB | tr -s ' ' | tr ' ' '\n' >> ~/mygpgkey_pub.gpg
