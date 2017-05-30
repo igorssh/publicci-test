@@ -6,7 +6,7 @@ jobs:
       - OUT: my_image
 
   - name: test
-    type: runCI
+    type: runCLI
     steps:
        - IN: my_image
        - echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > ~/mygpgkey_pub.gpg
