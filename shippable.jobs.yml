@@ -3,6 +3,7 @@ jobs:
     type: runCI
     steps:
       - IN: public-test_ciRepo
+      - OUT: runCI
 
   - name: test
     type: runCI
