@@ -3,13 +3,11 @@ jobs:
     type: runCI
     steps:
       - IN: public-test_ciRepo
-      - OUT: my_image
+      - OUT: param-1
 
   - name: test
     type: runSh
-    on_start:
-      - script: echo 'This block executes when the TASK starts'
     steps:
-      - IN: public-test_ciRepo
+      - IN: param-1
       - TASK:
         - script: ls -lah

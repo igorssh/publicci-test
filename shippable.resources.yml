@@ -1,0 +1,6 @@
+resources:
+  - name: param-1
+    type: params
+    version:
+      params:
+        key1: "value1"
