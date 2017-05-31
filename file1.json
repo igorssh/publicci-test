@@ -1,0 +1,4 @@
+{
+  "foo": "bar",
+  "jobName": "${JOB_NAME}"
+}
