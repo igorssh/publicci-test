@@ -7,16 +7,17 @@ jobs:
 
   - name: test
     type: runCLI
-    on_start:                                   #optional
+    on_start:
       - script: echo 'This block executes when the TASK starts
     steps:
       - IN: my_image
-      - script: echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > ~/mygpgkey_pub.gpg
-      - script: echo "" >> ~/mygpgkey_pub.gpg
-      - script: echo $MY_GPGKEY_PUB | tr -s ' ' | tr ' ' '\n' >> ~/mygpgkey_pub.gpg
-      - script: echo "-----END PGP PUBLIC KEY BLOCK-----" >> ~/mygpgkey_pub.gpg
-      - script: ls -lah ~/; cat ~/mygpgkey_pub.gpg
-      - script: pwd; ls -lah
-      - script: gpg --import ~/mygpgkey_pub.gpg
-      - script: gpg --list-keys
+      - TASK:
+        - script: echo "-----BEGIN PGP PUBLIC KEY BLOCK-----" > ~/mygpgkey_pub.gpg
+        - script: echo "" >> ~/mygpgkey_pub.gpg
+        - script: echo $MY_GPGKEY_PUB | tr -s ' ' | tr ' ' '\n' >> ~/mygpgkey_pub.gpg
+        - script: echo "-----END PGP PUBLIC KEY BLOCK-----" >> ~/mygpgkey_pub.gpg
+        - script: ls -lah ~/; cat ~/mygpgkey_pub.gpg
+        - script: pwd; ls -lah
+        - script: gpg --import ~/mygpgkey_pub.gpg
+        - script: gpg --list-keys
        #- rm ~/mygpgkey_pub.gpg
