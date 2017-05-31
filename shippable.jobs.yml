@@ -1,12 +1,12 @@
 jobs:
-  - name: public-test_runCI
+  - name: publicci-test_runCI
     type: runCI
     steps:
-      - IN: public-test_ciRepo
+      - IN: publicci-test_ciRepo
 
   - name: test
     type: runSh
     steps:
-      - IN: public-test_runCI
+      - IN: publicci-test_runCI
       - TASK:
         - script: ls -lah
