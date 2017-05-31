@@ -3,11 +3,10 @@ jobs:
     type: runCI
     steps:
       - IN: public-test_ciRepo
-      - OUT: param-1
 
   - name: test
     type: runSh
     steps:
-      - IN: param-1
+      - IN: public-test_runCI
       - TASK:
         - script: ls -lah
