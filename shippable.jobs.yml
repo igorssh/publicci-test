@@ -8,7 +8,7 @@ jobs:
   - name: test
     type: runSh
     on_start:
-          - script: echo 'This block executes when the TASK starts'
+      - script: echo 'This block executes when the TASK starts'
     steps:
       - IN: param-1
       - TASK:
