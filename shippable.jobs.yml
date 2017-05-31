@@ -6,10 +6,10 @@ jobs:
       - OUT: my_image
 
   - name: test
-    type: runCLI
+    type: runSh
     on_start:
       - script: echo 'This block executes when the TASK starts'
     steps:
       - IN: public-test_ciRepo
       - TASK:
-        - script: shippable_replace file1.json
+        - script: ls -lah
