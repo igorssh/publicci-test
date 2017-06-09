@@ -63,7 +63,8 @@ release:
     - script:
         name: run release
         code: |
-          git checkout master
+          git checkout $WERCKER_GIT_BRANCH
+          git reset --hard $WERCKER_GIT_COMMIT
           git remote -v
           git config --global user.email "igor.shevchuk@ctco.lv"
           git config --global user.name "Igor Shevchuk"
