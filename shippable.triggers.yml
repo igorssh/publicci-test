@@ -1,4 +1,0 @@
-- name: start
-  type: trigger
-  version:
-    counter: 1
